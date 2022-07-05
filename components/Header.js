@@ -83,17 +83,19 @@ export const Header = () => {
                 <img
                   src={session?.user?.image}
                   alt="userLogo"
-                  className="h-10 w-10  navBtn object-contain md:hidden inline-grid cursor-pointer rounded-full"
+                  className="h-10 p-1 !mr-2 navBtn object-contain md:hidden inline-grid cursor-pointer rounded-full"
                   layout="fill"
                   onClick={signOut}
                 />
+                
                 <MenuIcon
-                  className="h-7 md:hidden cursor-pointer rotate-90"
+                  className="h-12   md:hidden cursor-pointer rotate-90"
                   onClick={() => {
                     console.log("clicked");
                     setToggle(true);
                   }}
                 />
+                
               </>
             ) : (
               <>
@@ -143,7 +145,7 @@ export const Header = () => {
 
         {Toggle && (
           <>
-            <div className="h-52 z-15 fixed top-0 md:hidden bottom-0  flex right-0 w-28 justify-center mt-6  items-start ">
+            <div className="h-52  z-15 fixed -top-2 md:hidden bottom-0  flex -right-2 w-28 justify-center mt-6  items-start ">
               <div className=" flex bg-gray-50  flex-col items-center  backdrop:blur-lg rounded-md  justify-center mt-0 -mr-10">
                 <motion.div
                   whileInView={{ y: [15, 0] }}
